@@ -44,7 +44,7 @@ function calc(num) {
         document.getElementById('display').value = "0";
         return;
     }
-    if(String(eval(num)).length > 3 && String(eval(num))[0] == 0) {
+    if(String(eval(num)).length > 3 && String(eval(num))[0] == 0 && String(eval(num))[3] == 0) {
         document.getElementById('display').value = eval(num).toFixed(1);
         return
     }
