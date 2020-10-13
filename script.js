@@ -35,7 +35,6 @@ document.getElementById('calculator_form').addEventListener('submit', (e) => {
     const val = document.getElementById('display').value;
     calc(val);
 })
-
 function calc(num) {
     if(num === '') {
         document.getElementById('display').value = "0";
@@ -45,5 +44,10 @@ function calc(num) {
         document.getElementById('display').value = "0";
         return;
     }
+    if(String(eval(num)).length > 3 && String(eval(num))[0] == 0) {
+        document.getElementById('display').value = eval(num).toFixed(1);
+        return
+    }
     document.getElementById('display').value = eval(num);
+    
 }
