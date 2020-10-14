@@ -53,12 +53,14 @@ function check(el) {
         if(last != "+" && last != "-" && last != "*" && last != "/" && last != ".") {
             el.value = el.value.slice(0, el.value.length - 1);
         } else if(last == el.value[el.value.length-2]) {
+            for(let i in el.value) {
+                
+            }
             el.value = el.value.slice(0, el.value.length - 1);
         }
 
     }
 }
-
 
 function calc(num) {
     if(num === '') {
@@ -69,10 +71,22 @@ function calc(num) {
         document.getElementById('display').value = "0";
         return;
     }
-    if(String(eval(num)).length > 3 && String(eval(num))[0] == 0 && String(eval(num))[3] == 0) { 
-        document.getElementById('display').value = eval(num).toFixed(1);
+    if(String(eval(num)).length > 3 && String(eval(num))[0] == 0 && String(eval(num))[3] == 0) {
+        let sum = eval(num);
+        document.getElementById('display').value = +sum.toFixed(15);
         return
     }
     document.getElementById('display').value = eval(num);
-    
 }
+
+
+
+
+
+
+
+
+
+
+
+

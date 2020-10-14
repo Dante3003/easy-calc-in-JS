@@ -3,15 +3,28 @@
     padding: 0px;
     user-select: none;
 }
+body {
+    background-color: #3B3B3B;
+}
+
+:focus {
+    outline: none;
+}
+
 .calculator{
     width: 250px;
     height: 350px;
-    border: 2px solid black;
+    border: 1px solid #484848;
     margin: 100px auto;
     text-align: center;
-    background: #011264;
-    box-shadow: 0 0 30px grey;
+    background: #2F2F2F;
+    /* box-shadow: 0 0 30px grey; */
     border-radius: 4px;
+
+    border-radius: 6px;
+background: #3b3b3b;
+box-shadow:  4px 4px 16px #5e5e5e, 
+             -4px -4px 16px #5e5e5e;
 }
 .calculator_form{
     height: 100%;
@@ -25,25 +38,45 @@
 .calc_display{
     margin: 0 0 20px;
     width: 100%;
-    border: 2px solid darkslateblue;
+    border: 1px solid #646464;
     padding: 4px 2px;
     text-align: right;
     font: 700 16px Arial, sans-serif;
-    color: darkslateblue;
-    background-color: whitesmoke;
+    color:#8B8B8B;
+    background: #3b3b3b;
+    box-shadow: inset 3px 3px 7px #181818, 
+            inset -4px -4px 7px #5e5e5e;
 }
 .calculator_key{
     width: 41px;
     height: 35px;
     cursor: pointer;
     border: none;
+    color: #A9A9A9;
     transition: all .2s;
     text-transform: uppercase;
+    /* Эксперименты Дориюша */
+    border-radius: 15px;
+    background: #3b3b3b;
+    box-shadow:  3px 3px 3px #181818, 
+                 -3px -3px 7px #5e5e5e;
+    /* transition: all 0.3s ease; */
+    /* min-width: 20px; */
+    /* height: 30px; */
+    
+}
+
+.calculator_key:active {
+    /* transition: all 0.3s ease; */
+    border-radius: 15px;
+background: #3b3b3b;
+box-shadow: inset 3px 3px 5px #181818, 
+            inset -3px -3px 5px #5e5e5e;
 }
 .calculator_key--equal {
     width: 98px;
 }
 .calculator_key:hover{
-    background-color: #feff00;
-    font-weight: 700;
+    /* background-color: #feff00; */
+    /* font-weight: 700; */
 }
